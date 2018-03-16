@@ -8,7 +8,7 @@ function faster_rcnn_build()
 
 % Compile nms_mex
 if ~exist('nms_mex', 'file')
-  fprintf('Compiling nms_mex\n');
+  fprintf('Compiling nms_mex\n');  %当不存在nms_mex文件的时候进行编译，nms过程用C编写，mex编译后供matlab调用
 
   mex -O -outdir bin ...
       CXXFLAGS="\$CXXFLAGS -std=c++11"  ...
