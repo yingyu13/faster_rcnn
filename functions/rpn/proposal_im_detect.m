@@ -6,7 +6,7 @@ function [pred_boxes, scores, box_deltas_, anchors_, scores_] = proposal_im_dete
 % Licensed under The MIT License [see LICENSE for details]
 % --------------------------------------------------------    
 
-    im = single(im);
+    im = single(im);    %将im转换成单精度数
     [im_blob, im_scales] = get_image_blob(conf, im);
     im_size = size(im);
     scaled_im_size = round(im_size * im_scales);
