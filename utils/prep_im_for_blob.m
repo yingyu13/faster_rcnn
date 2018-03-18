@@ -3,7 +3,7 @@
 function [im, im_scale] = prep_im_for_blob(im, im_means, target_size, max_size)
     im = single(im);
     
-    if ~isa(im, 'gpuArray')   %判断im是否为gpuArray类型的对象
+    if ~isa(im, 'gpuArray')   %判断im是否为cuda可以处理的gpuArray类型的对象
         try
             im = bsxfun(@minus, im, im_means);
         catch
