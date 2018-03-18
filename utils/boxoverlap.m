@@ -1,3 +1,5 @@
+%用来计算两个boxes中box间的重叠系数。元组o中的元素是矩阵，矩阵o{i}代表boxes a和box b(i)之间的交叉系数，size(o{i})=(m,1)。m–表示boxes a中有m个box。而size(o)=n。n–表示boxes b中有n个box，最后返回cell2mat(o)，size为(m,n) 
+%这个函数主要在选择产生的roi时会用到，用于选择满足一定重叠系数的roi.
 function o = boxoverlap(a, b)
 % Compute the symmetric intersection over union overlap between a set of
 % bounding boxes in a and a single bounding box in b.
