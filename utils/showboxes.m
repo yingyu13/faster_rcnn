@@ -1,3 +1,4 @@
+%最后的输出结果，显示检测框并带有标注信息。  输入一张图片,含多个box坐标信息的元组boxes,每个box对应的标签legends,对图片进行信息的标注。输出图片尺寸固定，要注意对应box坐标的缩放。
 function showboxes(im, boxes, legends, color_conf)
 % Draw bounding boxes on top of an image.
 %   showboxes(im, boxes)
