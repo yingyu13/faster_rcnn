@@ -1,4 +1,6 @@
-  function [im, im_scale] = prep_im_for_blob(im, im_means, target_size, max_size)
+%prep_im_for_blob.m 根据输入图片，图片均值，目标尺寸，返回目标图片和缩放系数。 
+%prep_im_for_blob_size.m 按输入图片的尺寸和目标尺寸，返回尺寸缩放系数。
+function [im, im_scale] = prep_im_for_blob(im, im_means, target_size, max_size)
     im = single(im);
     
     if ~isa(im, 'gpuArray')   %判断im是否为gpuArray类型的对象
