@@ -1,3 +1,4 @@
+%坐标标定的不同方式之间的转换。
 function [ rectsLTWH ] = RectLTRB2LTWH( rectsLTRB )
 %rects (l, t, r, b) to (l, t, w, h)
 
