@@ -1,3 +1,4 @@
+%输入元组ims，ims{i}为一张图片,将ims转换为blob(w,h,3,n)，元祖变成blob格式数据
 function blob = im_list_to_blob(ims)
     max_shape = max(cell2mat(cellfun(@size, ims(:), 'UniformOutput', false)), [], 1);
     assert(all(cellfun(@(x) size(x, 3), ims, 'UniformOutput', true) == 3));
