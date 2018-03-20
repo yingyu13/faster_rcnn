@@ -155,6 +155,7 @@ function mAP = fast_rcnn_test(conf, imdb, roidb, varargin)
             save(save_file, 'boxes', 'inds');
             clear boxes inds;
         end
+        
         fprintf('test all images in %f seconds.\n', toc(t_start));
         
         caffe.reset_all(); 
